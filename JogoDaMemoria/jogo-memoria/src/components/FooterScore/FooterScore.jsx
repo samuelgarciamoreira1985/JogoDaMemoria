@@ -1,11 +1,13 @@
 //CSS
-import "./NavTitle.css"
+import "./FooterScore.css"
 
 const FooterScore = () => {
     
   return (
 
-    <div>
+    <div className="container-footer-score">
+
+        <h2>score: 100</h2>
 
     </div>
 

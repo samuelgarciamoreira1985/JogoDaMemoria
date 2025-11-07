@@ -1,12 +1,12 @@
 .container-nav-title {
     width: 100vw;
-    height: 100vh;
+    height: 22vh;
 }
 
 .title-memory-game {
     display: flex;
     flex-direction: row;
-    height: 20vh;
+    height: 22vh;
     background-color: rgba(33, 2, 206, 0.76);
 }
 

@@ -1,6 +1,7 @@
 //REACT
 import { Outlet } from "react-router-dom"
 import NavTitle from "./components/NavTitle/NavTitle"
+
 //CSS
 import './App.css'
 

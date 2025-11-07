@@ -1,3 +1,5 @@
+//REACT
+import FooterScore from "../components/FooterScore/FooterScore"
 //CSS
 import "./GamePlay.css"
 
@@ -7,6 +9,11 @@ const GamePlay = () => {
 
     <div>
         <h2>GAME PLAY...</h2>
+
+          <div>
+            <FooterScore/>
+          </div>
+
     </div>
 
   )
