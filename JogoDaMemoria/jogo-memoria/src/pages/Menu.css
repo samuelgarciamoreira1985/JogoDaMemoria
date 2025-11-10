@@ -1,0 +1,35 @@
+.container-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 85vh;
+    position: relative;
+}
+
+.container-menu img {
+    width: 70vw;
+    height: 85vh;
+    background-position: center center;
+    align-self: center;
+}
+
+.container-menu button {
+    position: absolute;
+    left: 45vw;
+    top: 21vh;
+    width: 200px;
+    height: 50px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    border: 5px solid #FAEE20;
+    background-color: #DF2A2B;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+}
+
+.container-menu button:hover {
+    background-color: #df2a2ac5;
+}

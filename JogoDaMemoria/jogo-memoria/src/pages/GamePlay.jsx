@@ -5,10 +5,24 @@ import "./GamePlay.css"
 
 const GamePlay = () => {
 
+  const card = document.querySelector('.card-gameplay')
+  card.addEventListener('click',(e) => {
+    card.classList.toggle("activedFlip")
+  })
+
   return (
 
-    <div>
-        <h2>GAME PLAY...</h2>
+    <div className="container-gameplay">
+
+      <div className="group-card">
+
+        <div className="card-gameplay">
+          <div className="front-card">parte da frente</div>
+
+          <div className="back-card">parte de tras</div>
+        </div>
+
+      </div>
 
           <div>
             <FooterScore/>

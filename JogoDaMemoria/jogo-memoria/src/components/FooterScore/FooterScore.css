@@ -1,6 +1,59 @@
 .container-footer-score {
-    background-color: aqua;
+    background-color: #563FDA;
     position: fixed;
     bottom: 0;
     width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.score-gameplay {
+    width: 18vw;
+    height: 6vh;
+    margin-left: 200px;
+    margin-top: 2vh;
+    border: 4px solid #FAEE20;
+    background-color: #DF2A2B;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.score-gameplay h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.time-gameplay {
+    display: flex;
+    flex-direction: row;
+    width: 18vw;
+    height: 6vh;
+    margin-top: 2vh;
+    border: 4px solid #FAEE20;
+    background-color: #DF2A2B;
+    align-content: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.time-gameplay h2 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    align-self: center;
+}
+
+.icon-time-gameplay {
+    font-size: 1.5rem;
+    color: #FAEE20;
 }

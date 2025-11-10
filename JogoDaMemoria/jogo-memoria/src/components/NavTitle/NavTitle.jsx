@@ -12,13 +12,11 @@ const NavTitle = () => {
     <div className="container-nav-title">
 
         <div className="title-memory-game">
-           <img src={bolsa} alt="imagem do grupo disney" />
+           
             <div className="title-text">
                 <h2>JOGO DA MEMÓRIA</h2>
-                <h3>DISNEY & TURMA DA MÔNICA</h3>
-                 <Link to="/"><span>menu</span></Link>
             </div>
-            <img src={bolsa} alt="imagem do grupo turma da mônica" />
+           
         </div>
         
     </div>

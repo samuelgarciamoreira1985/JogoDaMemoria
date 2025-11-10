@@ -1,0 +1,47 @@
+.container-gameplay {
+    width: 100vw;
+}
+/*****************************************/
+.group-card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+}
+
+.card-gameplay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+/*.group-card:hover .card-gameplay {
+    transform: rotateY(180deg);
+}*/
+
+.activedFlip {
+    transform: rotateY(180deg);
+}
+
+.front-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    background-color: red;
+    color: black;
+}
+
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+}

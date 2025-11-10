@@ -1,5 +1,7 @@
 //CSS
 import "./FooterScore.css"
+//ÍCONES
+import { GiTimeBomb } from "react-icons/gi";
 
 const FooterScore = () => {
     
@@ -7,7 +9,17 @@ const FooterScore = () => {
 
     <div className="container-footer-score">
 
-        <h2>score: 100</h2>
+        <div className="score-gameplay">
+          <h2>score x 100</h2>
+        </div>
+
+        <div className="time-gameplay">
+          <h2><GiTimeBomb className="icon-time-gameplay"/> 10:09</h2>
+        </div>
+
+        <div className="frame-hits-game-play">
+
+        </div>
 
     </div>
 
