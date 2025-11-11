@@ -6,15 +6,16 @@ import "./GamePlay.css"
 const GamePlay = () => {
 
   const card = document.querySelector('.card-gameplay')
-  card.addEventListener('click',(e) => {
+
+  const flipCard = () => {
     card.classList.toggle("activedFlip")
-  })
+  }
 
   return (
 
     <div className="container-gameplay">
 
-      <div className="group-card">
+      <div className="group-card" onClick={flipCard}>
 
         <div className="card-gameplay">
           <div className="front-card">parte da frente</div>

@@ -12,16 +12,17 @@
 
 .title-text {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100vw;
-    gap: 10px;
-    align-content: center;
+    gap: 17px;
+    justify-content: center;
+    align-self: center;
     padding: 10px;
     margin-top: 20px;
 }
 
 .title-text h2 {
-    align-self: center;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     font-size: 2.3rem;
@@ -36,4 +37,17 @@
     font-size: 1.8rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 4px 2px black;
+}
+
+.title-text img {
+    width: 60px;
+    height: 60px;
+}
+
+.img-title-left {
+
+}
+
+.img-title-rigth {
+    
 }
