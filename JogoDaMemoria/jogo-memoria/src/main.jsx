@@ -7,6 +7,8 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 // REACT
 import Menu from "./pages/Menu.jsx"
 import GamePlay from './pages/GamePlay.jsx'
+//CONTEXT - PROVIDER
+import { Provider_GamePlay } from './context/GamePlayContext.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +29,8 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider_GamePlay>
    <RouterProvider router={routes}/>
+   </Provider_GamePlay>
   </StrictMode>,
 )
