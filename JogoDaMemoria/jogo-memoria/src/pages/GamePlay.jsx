@@ -71,35 +71,26 @@ const GamePlay = () => {
     franjinha_front_card  // 35
   ])
 
-  /*const [lastCard,setLastCard] = useState(null)
-
-  const shuffleCards = (array) => { // EMBARALHAR AS CARTAS...
-    
-  }
-
-  const drawCards = () => {
-      const indexCard = Math.floor(Math.random() * cardsGame.length)
-      const newCardRandom = cardsGame[indexCard]
-      const cardsUpdate = [...cardsGame]
-      cardsUpdate.splice(indexCard,1)
-      setLastCard(newCardRandom)
-      setCardsGame(cardsUpdate)
-  }*/
-
-  const[indexCard,setIndexCard] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
-    ,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36])
-  const[currentCard,setCurrentCard] = useState(null)  
-
-  const drawCards = () => {
-    const newIndexCard = Math.floor(Math.random() * indexCard.length)
-    setCurrentCard(newIndexCard)
-    const newCardsGame = indexCard.filter(item => item !== newIndexCard)
-    console.log(indexCard + "numero sorteado: " + newIndexCard + "numero removiso: " + indexCard)
+  const[indexCard,setIndexCard] = useState([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+    ,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35])
+ 
+  /*const shuffleCards = (array) => { // EMBARALHAR CARTAS...
+    const shuffledCards = [...array]
+   for (let i = shuffledCards.length - 1; i > 0; i--) {
+      var random = (Math.floor(Math.random() * (i + 1)))
+      [shuffledCards[i],shuffledCards[random]] = [shuffledCards[random],shuffledCards[i]]
+   }
+   return shuffledCards
   }    
 
+  const handleShuffle = () => {
+    const newShuffleItems = shuffleCards(indexCard)
+    setIndexCard(newShuffleItems)
+  }
+
   useEffect(() => { // EMBARALHA AS CARTAS DEPOIS QUE A TELA DE JOGO FOR MONTADA...
-    drawCards()
-  },[])
+   handleShuffle()
+  },[])*/
 
   return (
 
@@ -110,252 +101,252 @@ const GamePlay = () => {
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay1")}>
           <div className="card-gameplay1">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta1" /></div>
-            <div className="back-card"><img src={cardsGame[currentCard]} alt="imagem de fundo da carta1" /></div>
+            <div className="back-card"><img src={cardsGame[0]} alt="imagem de fundo da carta1" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay2")}>
           <div className="card-gameplay2">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta2" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta2" /></div>
+            <div className="back-card"><img src={cardsGame[1]} alt="imagem de fundo da carta2" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay3")}>
           <div className="card-gameplay3">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta3" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta3" /></div>
+            <div className="back-card"><img src={cardsGame[2]} alt="imagem de fundo da carta3" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay4")}>
           <div className="card-gameplay4">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta4" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta4" /></div>
+            <div className="back-card"><img src={cardsGame[3]} alt="imagem de fundo da carta4" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay5")}>
           <div className="card-gameplay5">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta5" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta5" /></div>
+            <div className="back-card"><img src={cardsGame[4]} alt="imagem de fundo da carta5" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay6")}>
           <div className="card-gameplay6">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta6" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta6" /></div>
+            <div className="back-card"><img src={cardsGame[5]} alt="imagem de fundo da carta6" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay7")}>
           <div className="card-gameplay7">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta7" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta7" /></div>
+            <div className="back-card"><img src={cardsGame[6]} alt="imagem de fundo da carta7" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay8")}>
           <div className="card-gameplay8">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta8" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta8" /></div>
+            <div className="back-card"><img src={cardsGame[7]} alt="imagem de fundo da carta8" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay9")}>
           <div className="card-gameplay9">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta9" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta9" /></div>
+            <div className="back-card"><img src={cardsGame[8]} alt="imagem de fundo da carta9" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay10")}>
           <div className="card-gameplay10">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta10" /></div>
-            <div className="back-card"><img src={chico_front_card} alt="imagem de fundo da carta10" /></div>
+            <div className="back-card"><img src={cardsGame[9]} alt="imagem de fundo da carta10" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay11")}>
           <div className="card-gameplay11">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta11" /></div>
-            <div className="back-card"><img src={bidu_front_card} alt="imagem de fundo da carta11" /></div>
+            <div className="back-card"><img src={cardsGame[10]} alt="imagem de fundo da carta11" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay12")}>
           <div className="card-gameplay12">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta12" /></div>
-            <div className="back-card"><img src={bidu_front_card} alt="imagem de fundo da carta12" /></div>
+            <div className="back-card"><img src={cardsGame[11]} alt="imagem de fundo da carta12" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay13")}>
           <div className="card-gameplay13">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta13" /></div>
-            <div className="back-card"><img src={penadinho_front_card} alt="imagem de fundo da carta13" /></div>
+            <div className="back-card"><img src={cardsGame[12]} alt="imagem de fundo da carta13" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay14")}>
           <div className="card-gameplay14">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta14" /></div>
-            <div className="back-card"><img src={penadinho_front_card} alt="imagem de fundo da carta14" /></div>
+            <div className="back-card"><img src={cardsGame[13]} alt="imagem de fundo da carta14" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay15")}>
           <div className="card-gameplay15">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta15" /></div>
-            <div className="back-card"><img src={dorinha_front_card} alt="imagem de fundo da carta15" /></div>
+            <div className="back-card"><img src={cardsGame[14]} alt="imagem de fundo da carta15" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay16")}>
           <div className="card-gameplay16">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta16" /></div>
-            <div className="back-card"><img src={dorinha_front_card} alt="imagem de fundo da carta16" /></div>
+            <div className="back-card"><img src={cardsGame[15]} alt="imagem de fundo da carta16" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay17")}>
           <div className="card-gameplay17">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta17" /></div>
-            <div className="back-card"><img src={floquinho_front_card} alt="imagem de fundo da carta17" /></div>
+            <div className="back-card"><img src={cardsGame[16]} alt="imagem de fundo da carta17" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay18")}>
           <div className="card-gameplay18">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta18" /></div>
-            <div className="back-card"><img src={floquinho_front_card} alt="imagem de fundo da carta18" /></div>
+            <div className="back-card"><img src={cardsGame[17]} alt="imagem de fundo da carta18" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay19")}>
           <div className="card-gameplay19">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta19" /></div>
-            <div className="back-card"><img src={mingau_front_card} alt="imagem de fundo da carta19" /></div>
+            <div className="back-card"><img src={cardsGame[18]} alt="imagem de fundo da carta19" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay20")}>
           <div className="card-gameplay20">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta20" /></div>
-            <div className="back-card"><img src={mingau_front_card} alt="imagem de fundo da carta20" /></div>
+            <div className="back-card"><img src={cardsGame[19]} alt="imagem de fundo da carta20" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay21")}>
           <div className="card-gameplay21">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta21" /></div>
-            <div className="back-card"><img src={jotalhao_front_card} alt="imagem de fundo da carta21" /></div>
+            <div className="back-card"><img src={cardsGame[20]} alt="imagem de fundo da carta21" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay22")}>
           <div className="card-gameplay22">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta22" /></div>
-            <div className="back-card"><img src={jotalhao_front_card} alt="imagem de fundo da carta22" /></div>
+            <div className="back-card"><img src={cardsGame[21]} alt="imagem de fundo da carta22" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay23")}>
           <div className="card-gameplay23">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta23" /></div>
-            <div className="back-card"><img src={humberto_front_card} alt="imagem de fundo da carta23" /></div>
+            <div className="back-card"><img src={cardsGame[22]} alt="imagem de fundo da carta23" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay24")}>
           <div className="card-gameplay24">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta24" /></div>
-            <div className="back-card"><img src={humberto_front_card} alt="imagem de fundo da carta24" /></div>
+            <div className="back-card"><img src={cardsGame[23]} alt="imagem de fundo da carta24" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay25")}>
           <div className="card-gameplay25">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta25" /></div>
-            <div className="back-card"><img src={sansao_front_card} alt="imagem de fundo da carta25" /></div>
+            <div className="back-card"><img src={cardsGame[24]} alt="imagem de fundo da carta25" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay26")}>
           <div className="card-gameplay26">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta26" /></div>
-            <div className="back-card"><img src={sansao_front_card} alt="imagem de fundo da carta26" /></div>
+            <div className="back-card"><img src={cardsGame[25]} alt="imagem de fundo da carta26" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay27")}>
           <div className="card-gameplay27">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta27" /></div>
-            <div className="back-card"><img src={anjinho_front_card} alt="imagem de fundo da carta27" /></div>
+            <div className="back-card"><img src={cardsGame[26]} alt="imagem de fundo da carta27" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay28")}>
           <div className="card-gameplay28">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta28" /></div>
-            <div className="back-card"><img src={anjinho_front_card} alt="imagem de fundo da carta28" /></div>
+            <div className="back-card"><img src={cardsGame[27]} alt="imagem de fundo da carta28" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay29")}>
           <div className="card-gameplay29">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta29" /></div>
-            <div className="back-card"><img src={dalila_front_card} alt="imagem de fundo da carta29" /></div>
+            <div className="back-card"><img src={cardsGame[28]} alt="imagem de fundo da carta29" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay30")}>
           <div className="card-gameplay30">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta30" /></div>
-            <div className="back-card"><img src={dalila_front_card} alt="imagem de fundo da carta30" /></div>
+            <div className="back-card"><img src={cardsGame[29]} alt="imagem de fundo da carta30" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay31")}>
           <div className="card-gameplay31">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta31" /></div>
-            <div className="back-card"><img src={jeremias_front_card} alt="imagem de fundo da carta31" /></div>
+            <div className="back-card"><img src={cardsGame[30]} alt="imagem de fundo da carta31" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay32")}>
           <div className="card-gameplay32">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta32" /></div>
-            <div className="back-card"><img src={jeremias_front_card} alt="imagem de fundo da carta32" /></div>
+            <div className="back-card"><img src={cardsGame[31]} alt="imagem de fundo da carta32" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay33")}>
           <div className="card-gameplay33">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta33" /></div>
-            <div className="back-card"><img src={horacio_front_card} alt="imagem de fundo da carta33" /></div>
+            <div className="back-card"><img src={cardsGame[32]} alt="imagem de fundo da carta33" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay34")}>
           <div className="card-gameplay34">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta34" /></div>
-            <div className="back-card"><img src={horacio_front_card} alt="imagem de fundo da carta34" /></div>
+            <div className="back-card"><img src={cardsGame[33]} alt="imagem de fundo da carta34" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay35")}>
           <div className="card-gameplay35">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta35" /></div>
-            <div className="back-card"><img src={franjinha_front_card} alt="imagem de fundo da carta35" /></div>
+            <div className="back-card"><img src={cardsGame[34]} alt="imagem de fundo da carta35" /></div>
           </div>
         </div>
 
         <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay36")}>
           <div className="card-gameplay36">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta36" /></div>
-            <div className="back-card"><img src={franjinha_front_card} alt="imagem de fundo da carta36" /></div>
+            <div className="back-card"><img src={cardsGame[35]} alt="imagem de fundo da carta36" /></div>
           </div>
         </div>
 
