@@ -94,3 +94,28 @@
     border-radius: 10px 20px 20px 10px;
     width: 50px;
 }
+
+.btn-newgame-game-play {
+    position: absolute;
+    left: 400px;
+    top: 1.6vh;
+}
+
+.btn-newgame-game-play button {
+    border: none;
+    background-color: #FAEE20;
+    cursor: pointer;
+    border-radius: 10px 20px 20px 10px;
+    width: 50px;
+}
+
+.icon-newgame {
+    font-size: 3rem;
+    color: #DF2A2B;
+    border: 1px solid #FAEE20;
+    border-radius: 10px 20px 20px 10px;
+}
+
+.icon-newgame:hover {
+    color: #df2a2ab6;
+}

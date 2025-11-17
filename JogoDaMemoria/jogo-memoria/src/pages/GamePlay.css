@@ -406,6 +406,10 @@
     transform: rotateY(180deg);
 }
 
+.desactivedFlip {
+    transform: rotateY(0deg);
+}
+
 .front-card {
     position: absolute;
     width: 100%;

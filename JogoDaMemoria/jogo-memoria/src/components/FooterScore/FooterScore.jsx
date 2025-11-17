@@ -7,6 +7,7 @@ import "./FooterScore.css"
 //ÍCONES
 import { GiTimeBomb } from "react-icons/gi";
 import { FaPlay,FaPause  } from "react-icons/fa";
+import { RiRestartFill } from "react-icons/ri";
 
 const FooterScore = () => {
 
@@ -20,6 +21,10 @@ const FooterScore = () => {
 
           <div className="btn-playpause-game-play">
             <button type="button">{activedGamePlay === 0 ? <FaPlay className="icon-playpause"/> : <FaPause className="icon-playpause"/>}</button>
+          </div>
+
+          <div className="btn-newgame-game-play">
+            <button type="button">{activedGamePlay === 0 ? <RiRestartFill className="icon-playpause"/> : <FaPause className="icon-newgame"/>}</button>
           </div>
 
           <div className="time-gameplay">
