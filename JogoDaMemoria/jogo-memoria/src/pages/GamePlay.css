@@ -436,3 +436,7 @@
     color: white;
     transform: rotateY(180deg);
 }
+
+.square-cards-stop-temp {
+    background-color: black;
+}

@@ -23,6 +23,7 @@ import jeremias_front_card from "../assets/imagens/cards-gameplay/jeremias-front
 import horacio_front_card from "../assets/imagens/cards-gameplay/horacio-front-card.png"
 import franjinha_front_card from "../assets/imagens/cards-gameplay/franjinha-front-card.png"
 import { useEffect, useState } from "react"
+import { FaSquarespace } from "react-icons/fa"
 
 const GamePlay = () => {
 
@@ -38,34 +39,74 @@ const GamePlay = () => {
   const [isDisabledCard10,setIsDisabledCard10] = useState("all")
 
   const [attemptyCard,setAttemptyCard] = useState(0)
+  const [flips,setFlips] = useState([])
+  const [flipCard1,setFlipCard1] = useState("")
+  const [flipCard2,setFlipCard2] = useState("")
 
-  const flipCard = (classValue) => { // VIRA A CARTA...
+  const flipCard = (classValue,idCard) => { // VIRA A CARTA...
     const card = document.querySelector(classValue)
     card.classList.toggle("activedFlip")
+    setAttemptyCard(attemptyCard+1)
     setTimeout(function() {
-          if (classValue === ".card-gameplay1")  
-              setIsDisabledCard1("none")            
+          if (classValue === ".card-gameplay1")  {
+            setIsDisabledCard1("none")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
 
-          if (classValue === ".card-gameplay2")
-              setIsDisabledCard2('none') 
+          if (classValue === ".card-gameplay2"){
+            setIsDisabledCard2('none') 
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
             
-          if (classValue === ".card-gameplay3")            
-              setIsDisabledCard3("none")
+          if (classValue === ".card-gameplay3") {
+            setIsDisabledCard3("none")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }       
           
-          if (classValue === ".card-gameplay4")
+          if (classValue === ".card-gameplay4"){
             setIsDisabledCard4('none') 
-          if (classValue === ".card-gameplay5")
-          setIsDisabledCard5("none")
-          if (classValue === ".card-gameplay6")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay5"){
+            setIsDisabledCard5("none")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay6"){
             setIsDisabledCard6('none') 
-          if (classValue === ".card-gameplay7")
-          setIsDisabledCard7("none")
-          if (classValue === ".card-gameplay8")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay7"){
+            setIsDisabledCard7("none")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay8"){
             setIsDisabledCard8('none') 
-          if (classValue === ".card-gameplay9")
-          setIsDisabledCard9("none")
-          if (classValue === ".card-gameplay10")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay9"){
+            setIsDisabledCard9("none")
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
+
+          if (classValue === ".card-gameplay10"){
             setIsDisabledCard10('none') 
+            setFlips(prevFlips => [...prevFlips,idCard])
+            console.log("pares: " + flips)
+          }
         },100)
   }
 
@@ -130,9 +171,61 @@ const GamePlay = () => {
       console.log(indexCard)
        }
 
+    const stopTempGame = () => { // PARA O JOGO TEMPORARIAMENTE...
+      setIsDisabledCard1("none")
+      setIsDisabledCard2('none') 
+    }
+
+    /*const playTempGame = () => { // RETORNA O JOGO TEMPORARIAMENTE...
+      setIsDisabledCard1("all")
+      setIsDisabledCard2('all') 
+    }*/
+
+    /*const checkMatch = () => { // COMPARA AS DUAS CARTAS...
+      if (flips[0] === "/src/assets/imagens/cards-gameplay/cebolinha-front-card.png" && flips[1] === "/src/assets/imagens/cards-gameplay/cebolinha-front-card.png") {
+          setFlipCard1("CEBOLINHA") 
+          setFlipCard2("CEBOLINHA")
+      } else if (flips[0] === "/src/assets/imagens/cards-gameplay/monica-front-card.png" && flips[1] === "/src/assets/imagens/cards-gameplay/monica-front-card.png") {
+          setFlipCard1("MÔNICA") 
+          setFlipCard2("MÔNICA")
+      }
+      if (flips[0] === "/src/assets/imagens/cards-gameplay/cascao-front-card.png" && flips[1] === "/src/assets/imagens/cards-gameplay/cascao-front-card.png") {
+          setFlipCard1("CASCÃO") 
+          setFlipCard2("CASCÂO")
+      }
+      if (flips[0] === "/src/assets/imagens/cards-gameplay/magali-front-card.png" && flips[1] === "/src/assets/imagens/cards-gameplay/magali-front-card.png") {
+          setFlipCard1("MAGALI") 
+          setFlipCard2("MAGALI")
+      }
+      if (flips[0] === "/src/assets/imagens/cards-gameplay/chico-front-card.png" && flips[1] === "/src/assets/imagens/cards-gameplay/chico-front-card.png") {
+          setFlipCard1("CHICO") 
+          setFlipCard2("CHICO")
+      }
+    }
+
+    const checkFinally = () => {
+      checkMatch()
+      if (flipCard1 === flipCard2) {
+        alert("PARABÉNS. PAR FORMADO!")
+      }
+    }*/
+
   useEffect(() => { // EMBARALHA AS CARTAS DEPOIS QUE A TELA DE JOGO FOR MONTADA...
     shuffleCardsDeck()
   },[])
+
+  useEffect(() => { // VERIFICA AS DUAS CARTAS VIRADAS...
+    if (attemptyCard === 2) {
+      stopTempGame()
+      setTimeout(() => {
+        alert("2 cartas ja viradas")   
+        //checkFinally()
+        //playTempGame()   
+      }, 600);
+      setAttemptyCard(0)
+      setFlips([])
+    }
+  },[attemptyCard])
 
   return (
 
@@ -140,77 +233,77 @@ const GamePlay = () => {
 
       <div className="square-cards">
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard1}} onClick={() => flipCard(".card-gameplay1")}>
+        <div className="group-card" title={cardsGame[indexCard[0]]} id={cardsGame[indexCard[0]]} style={{userSelect:"none",pointerEvents:isDisabledCard1}} onClick={() => flipCard(".card-gameplay1",cardsGame[indexCard[0]])}>
           <div className="card-gameplay1">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta1" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[0]]} alt="imagem de fundo da carta1" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard2}} onClick={() => flipCard(".card-gameplay2")}>
+        <div className="group-card" title={cardsGame[indexCard[1]]} id={cardsGame[indexCard[1]]} style={{userSelect:"none",pointerEvents:isDisabledCard2}} onClick={() => flipCard(".card-gameplay2",cardsGame[indexCard[1]])}>
           <div className="card-gameplay2">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta2" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[1]]} alt="imagem de fundo da carta2" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard3}} onClick={() => flipCard(".card-gameplay3")}>
+        <div className="group-card" title={cardsGame[indexCard[2]]} id={cardsGame[indexCard[2]]} style={{userSelect:"none",pointerEvents:isDisabledCard3}} onClick={() => flipCard(".card-gameplay3",cardsGame[indexCard[2]])}>
           <div className="card-gameplay3">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta3" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[2]]} alt="imagem de fundo da carta3" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard4}} onClick={() => flipCard(".card-gameplay4")}>
+        <div className="group-card" title={cardsGame[indexCard[3]]} id={cardsGame[indexCard[3]]} style={{userSelect:"none",pointerEvents:isDisabledCard4}} onClick={() => flipCard(".card-gameplay4",cardsGame[indexCard[3]])}>
           <div className="card-gameplay4">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta4" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[3]]} alt="imagem de fundo da carta4" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard5}} onClick={() => flipCard(".card-gameplay5")}>
+        <div className="group-card" title={cardsGame[indexCard[4]]} id={cardsGame[indexCard[4]]} style={{userSelect:"none",pointerEvents:isDisabledCard5}} onClick={() => flipCard(".card-gameplay5",cardsGame[indexCard[4]])}>
           <div className="card-gameplay5">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta5" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[4]]} alt="imagem de fundo da carta5" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard6}} onClick={() => flipCard(".card-gameplay6")}>
+        <div className="group-card" title={cardsGame[indexCard[5]]} id={cardsGame[indexCard[5]]} style={{userSelect:"none",pointerEvents:isDisabledCard6}} onClick={() => flipCard(".card-gameplay6",cardsGame[indexCard[5]])}>
           <div className="card-gameplay6">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta6" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[5]]} alt="imagem de fundo da carta6" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard7}} onClick={() => flipCard(".card-gameplay7")}>
+        <div className="group-card" title={cardsGame[indexCard[6]]} id={cardsGame[indexCard[6]]} style={{userSelect:"none",pointerEvents:isDisabledCard7}} onClick={() => flipCard(".card-gameplay7",cardsGame[indexCard[6]])}>
           <div className="card-gameplay7">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta7" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[6]]} alt="imagem de fundo da carta7" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard8}} onClick={() => flipCard(".card-gameplay8")}>
+        <div className="group-card" title={cardsGame[indexCard[7]]} id={cardsGame[indexCard[7]]} style={{userSelect:"none",pointerEvents:isDisabledCard8}} onClick={() => flipCard(".card-gameplay8",cardsGame[indexCard[7]])}>
           <div className="card-gameplay8">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta8" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[7]]} alt="imagem de fundo da carta8" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard9}} onClick={() => flipCard(".card-gameplay9")}>
+        <div className="group-card" title={cardsGame[indexCard[8]]} id={cardsGame[indexCard[8]]} style={{userSelect:"none",pointerEvents:isDisabledCard9}} onClick={() => flipCard(".card-gameplay9",cardsGame[indexCard[8]])}>
           <div className="card-gameplay9">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta9" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[8]]} alt="imagem de fundo da carta9" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none",pointerEvents:isDisabledCard10}} onClick={() => flipCard(".card-gameplay10")}>
+        <div className="group-card" title={cardsGame[indexCard[9]]} id={cardsGame[indexCard[9]]} style={{userSelect:"none",pointerEvents:isDisabledCard10}} onClick={() => flipCard(".card-gameplay10",cardsGame[indexCard[9]])}>
           <div className="card-gameplay10">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta10" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[9]]} alt="imagem de fundo da carta10" /></div>
           </div>
         </div>
 
-        <div className="group-card" style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay11")}>
+        <div className="group-card" title={cardsGame[indexCard[10]]} id={cardsGame[indexCard[10]]} style={{userSelect:"none"}} onClick={() => flipCard(".card-gameplay11",cardsGame[indexCard[10]])}>
           <div className="card-gameplay11">
             <div className="front-card"><img src={back_card_gameplay} alt="imagem do frontal da carta11" /></div>
             <div className="back-card"><img src={cardsGame[indexCard[10]]} alt="imagem de fundo da carta11" /></div>
