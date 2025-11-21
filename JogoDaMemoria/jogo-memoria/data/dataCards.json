@@ -3,7 +3,7 @@
         "idCard": 1,
         "imageCard": "/cards/monica-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MÔNICA",
+        "descriptionCard": "A",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay1"
     },
@@ -11,7 +11,7 @@
         "idCard": 2,
         "imageCard": "/cards/cebolinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CEBOLINHA",
+        "descriptionCard": "B",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay2"
     },
@@ -19,7 +19,7 @@
         "idCard": 3,
         "imageCard": "/cards/cascao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CASCÃO",
+        "descriptionCard": "C",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay3"
     },
@@ -27,7 +27,7 @@
         "idCard": 4,
         "imageCard": "/cards/chico-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CHICO",
+        "descriptionCard": "D",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay4"
     },
@@ -35,7 +35,7 @@
         "idCard": 5,
         "imageCard": "/cards/magali-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MAGALI",
+        "descriptionCard": "E",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay5"
     },
@@ -43,7 +43,7 @@
         "idCard": 6,
         "imageCard": "/cards/anjinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "ANJINHO",
+        "descriptionCard": "F",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay6"
     },
@@ -51,7 +51,7 @@
         "idCard": 7,
         "imageCard": "/cards/bidu-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "BIDU",
+        "descriptionCard": "G",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay7"
     },
@@ -59,7 +59,7 @@
         "idCard": 8,
         "imageCard": "/cards/dalila-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "DALILA",
+        "descriptionCard": "H",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay8"
     },
@@ -67,7 +67,7 @@
         "idCard": 9,
         "imageCard": "/cards/dorinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "DORINHA",
+        "descriptionCard": "I",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay9"
     },
@@ -75,7 +75,7 @@
         "idCard": 10,
         "imageCard": "/cards/floquinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "FLOQUINHO",
+        "descriptionCard": "J",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay10"
     },
@@ -83,7 +83,7 @@
         "idCard": 11,
         "imageCard": "/cards/franjinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "FRANJINHA",
+        "descriptionCard": "K",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay11"
     },
@@ -91,7 +91,7 @@
         "idCard": 12,
         "imageCard": "/cards/horacio-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "HORÁCIO",
+        "descriptionCard": "M",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay12"
     },
@@ -99,7 +99,7 @@
         "idCard": 13,
         "imageCard": "/cards/humberto-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "HUMBERTO",
+        "descriptionCard": "N",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay13"
     },
@@ -107,7 +107,7 @@
         "idCard": 14,
         "imageCard": "/cards/jeremias-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "JERÊMIAS",
+        "descriptionCard": "O",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay14"
     },
@@ -115,7 +115,7 @@
         "idCard": 15,
         "imageCard": "/cards/jotalhao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "JOTALHÃO",
+        "descriptionCard": "P",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay15"
     },
@@ -123,7 +123,7 @@
         "idCard": 16,
         "imageCard": "/cards/mingau-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MINGAU",
+        "descriptionCard": "Q",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay16"
     },
@@ -131,7 +131,7 @@
         "idCard": 17,
         "imageCard": "/cards/penadinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "PENADINHO",
+        "descriptionCard": "R",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay17"
     },
@@ -139,7 +139,7 @@
         "idCard": 18,
         "imageCard": "/cards/sansao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "SANSÃO",
+        "descriptionCard": "S",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay18"
     },
@@ -147,7 +147,7 @@
         "idCard": 19,
         "imageCard": "/cards/monica-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MÔNICA",
+        "descriptionCard": "A",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay19"
     },
@@ -155,7 +155,7 @@
         "idCard": 20,
         "imageCard": "/cards/cebolinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CEBOLINHA",
+        "descriptionCard": "B",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay20"
     },
@@ -163,7 +163,7 @@
         "idCard": 21,
         "imageCard": "/cards/cascao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CASCÃO",
+        "descriptionCard": "C",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay21"
     },
@@ -171,7 +171,7 @@
         "idCard": 22,
         "imageCard": "/cards/chico-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "CHICO",
+        "descriptionCard": "D",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay22"
     },
@@ -179,7 +179,7 @@
         "idCard": 23,
         "imageCard": "/cards/magali-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MAGALI",
+        "descriptionCard": "E",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay23"
     },
@@ -187,7 +187,7 @@
         "idCard": 24,
         "imageCard": "/cards/anjinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "ANJINHO",
+        "descriptionCard": "F",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay24"
     },
@@ -195,7 +195,7 @@
         "idCard": 25,
         "imageCard": "/cards/bidu-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "BIDU",
+        "descriptionCard": "G",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay25"
     },
@@ -203,7 +203,7 @@
         "idCard": 26,
         "imageCard": "/cards/dalila-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "DALILA",
+        "descriptionCard": "H",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay26"
     },
@@ -211,7 +211,7 @@
         "idCard": 27,
         "imageCard": "/cards/dorinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "DORINHA",
+        "descriptionCard": "I",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay27"
     },
@@ -219,7 +219,7 @@
         "idCard": 28,
         "imageCard": "/cards/floquinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "FLOQUINHO",
+        "descriptionCard": "J",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay28"
     },
@@ -227,7 +227,7 @@
         "idCard": 29,
         "imageCard": "/cards/franjinha-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "FRANJINHA",
+        "descriptionCard": "K",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay29"
     },
@@ -235,7 +235,7 @@
         "idCard": 30,
         "imageCard": "/cards/horacio-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "HORÁCIO",
+        "descriptionCard": "M",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay30"
     },
@@ -243,7 +243,7 @@
         "idCard": 31,
         "imageCard": "/cards/humberto-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "HUMBERTO",
+        "descriptionCard": "N",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay31"
     },
@@ -251,7 +251,7 @@
         "idCard": 32,
         "imageCard": "/cards/jeremias-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "JERÊMIAS",
+        "descriptionCard": "O",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay32"
     },
@@ -259,7 +259,7 @@
         "idCard": 33,
         "imageCard": "/cards/jotalhao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "JOTALHÃO",
+        "descriptionCard": "P",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay33"
     },
@@ -267,7 +267,7 @@
         "idCard": 34,
         "imageCard": "/cards/mingau-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "MINGAU",
+        "descriptionCard": "Q",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay34"
     },
@@ -275,7 +275,7 @@
         "idCard": 35,
         "imageCard": "/cards/penadinho-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "PENADINHO",
+        "descriptionCard": "R",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay35"
     },
@@ -283,7 +283,7 @@
         "idCard": 36,
         "imageCard": "/cards/sansao-front-card.png",
         "flipedCard": false,
-        "descriptionCard": "SANSÃO",
+        "descriptionCard": "S",
         "backCard": "/cards/back-card-gameplay.png",
         "classCard": "card-gameplay36"
     }

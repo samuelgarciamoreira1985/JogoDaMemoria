@@ -11,7 +11,7 @@ import { RiRestartFill } from "react-icons/ri";
 
 const FooterScore = () => {
 
-  const { activedGamePlay,setActivedGamePlay,score,setScore } = useContext(Context_GamePlay)
+  const { activedGamePlay,setActivedGamePlay,match,setMatch } = useContext(Context_GamePlay)
     
   return (
 
@@ -32,7 +32,7 @@ const FooterScore = () => {
           </div>
 
           <div className="score-gameplay">
-            <h2>score x {score}</h2>
+            <h2>pares x {match}</h2>
           </div>
 
         </div>
