@@ -7,6 +7,7 @@ import { Context_GamePlay } from "../context/GamePlayContext"
 import data_cards from "../../data/dataCards.json"
 //CSS
 import "./GamePlay.css"
+import { RiAlertLine } from "react-icons/ri"
 
 const GamePlay = () => {
 
@@ -14,11 +15,15 @@ const GamePlay = () => {
 
   const[indexCard,setIndexCard] = useState([])
   const[turnCards,setTurnCards] = useState([]) // ARRAY DE CARTAS VIRADAS...
+  const[activedGame,setActivedGame] = useState("all") // ATIVA O GAME...
+  const[stateClass,setStateClass] = useState("default")
+
+  //let card = document.querySelector(stateClass)
 
   const flipCard = (classValue,valueCard) => { // VIRA A CARTA...
     const card = document.querySelector(classValue)
-    card.classList.toggle("activedFlip")
     addCardTurn(valueCard)
+    card.classList.toggle("activedFlip")
   }
 
   const addCardTurn = (cardValue) => { // ADICIONA DUAS CARTAS VIRADAS NO TURNO...
@@ -50,14 +55,23 @@ const GamePlay = () => {
     shuffleCardsDeck()
   },[])
 
+  const desactivedGame = () => { // DESATIVA TODO O GAME POR DOIS SEGUNDOS...
+    setActivedGame("none")
+    setTimeout(() => {
+      setActivedGame("all")
+    }, 3000);
+  }
+
   useEffect(() => {
     if (turnCards.length === 2) {
           if (turnCards[0] === turnCards[1]) {
             alert("deu match!")
             setMatch(match + 1)
             setTurnCards([])
+            desactivedGame()
           } else {
             setTurnCards([])
+            desactivedGame()
           }
         }
   },[turnCards])
@@ -69,7 +83,7 @@ const GamePlay = () => {
       <div className="square-cards">
 
         {data_cards && data_cards?.map(card => (
-        <div className="group-card" key={card.idCard} title={card.descriptionCard} style={{userSelect:"none"}} onClick={() => flipCard("." + card.classCard,card.descriptionCard)}>
+        <div className="group-card" key={card.idCard} title={card.descriptionCard} style={{userSelect:"none",pointerEvents:activedGame}} onClick={() => flipCard("." + card.classCard,card.descriptionCard)}>
           <div className={card.classCard}>
             <div className="front-card"><img src={card.backCard} alt="imagem do frontal da carta1" /></div>
             <div className="back-card"><img src={card.imageCard} alt="imagem de fundo da carta1" /></div>
